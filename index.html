@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Tales of Ceylon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="w-full bg-white shadow-md fixed z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+
+        <!-- Logo/Icon -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-auto" src="https://via.placeholder.com/30" alt="Logo">
+        </div>
+
+        <!-- Nav Links (Desktop) -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Tales of Ceylon</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Destinations</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">Experiences</a>
+          
+          <!-- Search -->
+          <div class="relative">
+            <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full px-4 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          </div>
+
+          <!-- Dropdown Trigger -->
+          <button onclick="toggleDropdown()" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            Menu ▼
+          </button>
+        </div>
+
+        <!-- Hamburger (Mobile) -->
+        <div class="md:hidden">
+          <button onclick="toggleMobileMenu()" class="text-gray-700 focus:outline-none">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dropdown Menu (Full Page) -->
+  <div id="dropdown" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+    <a href="#" class="hover:text-blue-600">Home</a>
+    <a href="#" class="hover:text-blue-600">Tales of Ceylon</a>
+    <a href="#" class="hover:text-blue-600">Destinations</a>
+    <a href="#" class="hover:text-blue-600">Experiences</a>
+    <button onclick="toggleDropdown()" class="mt-8 text-red-500">Close ✖</button>
+  </div>
+
+  <!-- Mobile Menu (Drawer Style) -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white shadow-md z-40">
+    <div class="flex flex-col space-y-3 p-4">
+      <a href="#" class="text-gray-700">Home</a>
+      <a href="#" class="text-gray-700">Tales of Ceylon</a>
+      <a href="#" class="text-gray-700">Destinations</a>
+      <a href="#" class="text-gray-700">Experiences</a>
+      <input type="text" placeholder="Search..." class="border border-gray-300 rounded px-3 py-1">
+      <button onclick="toggleDropdown()" class="text-gray-700">Menu ▼</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById("dropdown");
+      dropdown.classList.toggle("hidden");
+    }
+
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>

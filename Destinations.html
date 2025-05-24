@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Destinations - Tales of Sri Lanka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://via.placeholder.com/30" type="image/png" />
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- 🌐 NAVBAR (same as homepage) -->
+  <nav class="w-full bg-white shadow-md fixed z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <div class="flex-shrink-0 flex items-center">
+          <img class="h-8 w-auto" src="https://via.placeholder.com/30" alt="Logo" />
+        </div>
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex space-x-6 items-center">
+          <a href="test1.html" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="Tales of Sri Lanka.html" class="text-gray-700 hover:text-blue-600">Tales of Ceylon</a>
+          <a href="destinations.html" class="text-blue-600 font-semibold">Destinations</a>
+          <a href="#experiences" class="text-gray-700 hover:text-blue-600">Experiences</a>
+          <input type="text" placeholder="Search..." class="border border-gray-300 rounded-full px-4 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400">
+          <button onclick="toggleDropdown()" class="text-gray-700 hover:text-blue-600 focus:outline-none">Menu ▼</button>
+        </div>
+        <!-- Mobile Nav Icon -->
+        <div class="md:hidden">
+          <button onclick="toggleMobileMenu()" class="text-gray-700 focus:outline-none text-2xl">☰</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Fullscreen Dropdown -->
+  <div id="dropdown" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-6 text-xl">
+    <a href="test1.html" class="hover:text-blue-600">Home</a>
+    <a href="Tales of Sri Lanka.html" class="hover:text-blue-600">Tales of Ceylon</a>
+    <a href="destinations.html" class="hover:text-blue-600">Destinations</a>
+    <a href="#experiences" class="hover:text-blue-600">Experiences</a>
+    <button onclick="toggleDropdown()" class="mt-8 text-red-500">Close ✖</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-white shadow-md z-40">
+    <div class="flex flex-col space-y-3 p-4">
+      <a href="test1.html" class="text-gray-700">Home</a>
+      <a href="Tales of Sri Lanka.html" class="text-gray-700">Tales of Ceylon</a>
+      <a href="destinations.html" class="text-gray-700">Destinations</a>
+      <a href="#experiences" class="text-gray-700">Experiences</a>
+      <input type="text" placeholder="Search..." class="border border-gray-300 rounded px-3 py-1">
+      <button onclick="toggleDropdown()" class="text-gray-700">Menu ▼</button>
+    </div>
+  </div>
+
+  <!-- 🌄 Hero Banner for Destinations -->
+  <section class="pt-20 pb-12 bg-cover bg-center" style="background-image: url('images/sri-lanka-hero.jpg');">
+    <div class="bg-black bg-opacity-60 py-20 px-4 text-center text-white">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Destinations in Sri Lanka</h1>
+      <p class="text-lg max-w-2xl mx-auto">Explore the culture, nature, and charm of Sri Lanka's most iconic cities and regions.</p>
+    </div>
+  </section>
+
+  <!-- 🧳 Destination Cards Section -->
+  <section class="py-16 bg-gray-100" id="destinations">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+
+                    <!-- 🏙️ Colombo -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/colombo.jpg" alt="Colombo" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Cosmopolitan City of</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Colombo</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                A vibrant blend of colonial charm and urban energy, Colombo is Sri Lanka’s bustling capital.
+                </p>
+                <a href="colombo.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🌊 Galle -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/galle.jpg" alt="Galle" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Historic Fort City</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Galle</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Famous for its Dutch Fort and colonial architecture, Galle offers history and ocean views.
+                </p>
+                <a href="galle.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🕌 Kandy -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/kandy.jpg" alt="Kandy" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Spiritual Capital</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Kandy</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Nestled in the hills, Kandy is home to sacred temples, gardens, and traditional dances.
+                </p>
+                <a href="kandy.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🗿 Sigiriya -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/sigiriya.jpg" alt="Sigiriya" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Ancient Rock Fortress</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Sigiriya</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Climb the iconic Lion Rock for epic views and frescoes from an ancient royal palace.
+                </p>
+                <a href="sigiriya.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🌿 Ella -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/ella.jpg" alt="Ella" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Hill Country Gem</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Ella</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                A peaceful village surrounded by tea estates, waterfalls, and mountain hikes.
+                </p>
+                <a href="ella.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🏛️ Anuradhapura -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/anuradhapura.jpg" alt="Anuradhapura" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Ancient Capital</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Anuradhapura</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Explore ancient stupas, temples, and sacred trees in this historic royal city.
+                </p>
+                <a href="anuradhapura.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🏞️ Nuwara Eliya -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/nuwaraeliya.jpg" alt="Nuwara Eliya" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Little England</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Nuwara Eliya</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Known for its cool climate, tea plantations, and charming British colonial vibes.
+                </p>
+                <a href="nuwaraeliya.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🌸 Jaffna -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/jaffna.jpg" alt="Jaffna" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Northern Beauty</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Jaffna</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Discover rich Tamil culture, historic temples, and unspoiled beaches in Jaffna.
+                </p>
+                <a href="jaffna.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🏖️ Bentota -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/bentota.jpg" alt="Bentota" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Rivers & Beaches</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Bentota</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Enjoy river safaris, water sports, and sandy beaches in this southern paradise.
+                </p>
+                <a href="bentota.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🐬 Mirissa -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/mirissa.jpg" alt="Mirissa" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Whale Watching</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Mirissa</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Famous for surfing, whale watching, and stunning sunset views on the beach.
+                </p>
+                <a href="mirissa.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+            <!-- 🐠 Hikkaduwa -->
+            <div class="bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="images/hikkaduwa.jpg" alt="Hikkaduwa" class="w-full h-56 object-cover" />
+            <div class="p-6">
+                <p class="text-xs tracking-widest text-gray-400 uppercase">Coral Coast</p>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Hikkaduwa</h3>
+                <p class="text-sm text-gray-600 mb-4">
+                Snorkel the coral reefs, enjoy nightlife, or relax by palm-fringed golden beaches.
+                </p>
+                <a href="hikkaduwa.html" class="text-blue-600 font-semibold text-sm flex items-center space-x-1 hover:underline">
+                <span>Read More</span><span>➡️</span>
+                </a>
+            </div>
+            </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 🦶 Footer (same as homepage) -->
+  <footer class="bg-gray-900 text-white mt-24">
+    <div class="max-w-7xl mx-auto px-4 py-10 text-center">
+      <h3 class="text-lg font-semibold mb-4">Connect with Us</h3>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://facebook.com" target="_blank" class="hover:text-blue-400">Facebook</a>
+        <a href="https://twitter.com" target="_blank" class="hover:text-blue-400">Twitter</a>
+        <a href="https://instagram.com" target="_blank" class="hover:text-blue-400">Instagram</a>
+        <a href="https://youtube.com" target="_blank" class="hover:text-blue-400">YouTube</a>
+      </div>
+      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="index.html" class="text-gray-300 hover:text-white">Home</a>
+        <a href="Tales of Sri Lanka.html" class="text-gray-300 hover:text-white">Tales of Ceylon</a>
+        <a href="destinations.html" class="text-gray-300 hover:text-white">Destinations</a>
+        <a href="#experiences" class="text-gray-300 hover:text-white">Experiences</a>
+      </div>
+      <p class="text-sm text-gray-500">&copy; 2025 Tales of Sri Lanka. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdown").classList.toggle("hidden");
+    }
+    function toggleMobileMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>

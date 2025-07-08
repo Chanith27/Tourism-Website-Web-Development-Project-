@@ -5,4 +5,5 @@
 3. Updated website with a nice homepage structure & added "Tales of Sri Lanka" page on 20th May.
 4. Made the "Tales of Sri Lanka Page" structure basically on 23rd May.
 5. We made the "Destinations Page" structure basically on 24th May.
-6.I copied the original reposotory.
+6. I copied the original reposotory.
+7. My 1st pull request is done.

@@ -7,3 +7,4 @@
 5. We made the "Destinations Page" structure basically on 24th May.
 6. I copied the original reposotory (by Nirma)
 7. My 1st pull request is done (by Nirma)
+8. New Tutorial 
